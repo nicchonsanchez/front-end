@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novos inputs</title>
+</head>
+<body>
+
+    <!--
+        Para mais informações: https://www.w3schools.com/html/html_form_input_types.asp
+    -->
+    <form action="">
+        <input type="text" name="name" placeholder="Digite seu nome..." required> <!-- Required serve para tornar obrigatório o preenchimento do campo -->
+        <input type="email" name="email" value="Digite um e-mail"> <!-- Já deixei um valor pré definido pra testar o reset abaixo -->
+        <input type="number" name="age" min="1" max="130" placeholder="Idade">
+        <input type="date" name="birthdate"> <!-- Não tem como usar o placeholder -->
+        <input type="month" name="month">
+        <input type="week" name="week">
+        <input type="color" name="color" value="#150D7D">
+        <input type="tel" name="tel">
+        <input type="url" name="url" alt="url">
+        <input type="reset" value="Resetar"> <!-- Serve para resetar os dados do formulário ao valor atribuído por padrão -->
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
