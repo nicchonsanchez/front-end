@@ -1,0 +1,12 @@
+header {
+    width: 100%;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 2%;
+}

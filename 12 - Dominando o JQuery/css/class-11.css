@@ -1,0 +1,549 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    transition: 0.5s;
+    background-color: #0d0d0d;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+.box{
+    transition: 0.5s;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto 20px;
+    padding: 80px 2%;
+    background-color: #ccc;
+    border-radius: 0px;
+}
+body div.titulo{
+    background: linear-gradient(270deg,rgba(77, 255, 0,0.01),rgba(0, 255, 255,0.01));
+    margin: 20px auto 20px;
+    border: 3px solid white;
+    border-image: linear-gradient(90deg,rgb(77, 255, 0),rgb(0, 255, 255));
+    border-image-slice: 1;
+}
+div#vimeo-record-extension{
+    padding: unset;
+    color: unset;
+    background-color: unset;
+    margin: unset;
+}
+
+aside:hover,
+body div.titulo:hover{
+    border-image: linear-gradient(270deg,rgb(77, 255, 0),rgb(0, 255, 255));
+    background: linear-gradient(270deg,rgba(77, 255, 0,0.1),rgba(0, 255, 255,0.1));
+    border-image-slice: 1;
+}
+body div.titulo h2{
+    color: white;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #0d0d0d;
+}
+
+textarea{
+    padding: 10px;
+    width: 100%;
+    resize: none;
+}
+select{
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+}
+
+
+body.grande{
+    min-height: 5000px;
+}
+
+.percentual-rolagem{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 10px;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+
+    background-color: aqua;
+}
+.preenchimento{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(90deg,rgb(77, 255, 0) calc(100% - 50px),rgb(0, 255, 255));
+}
+
+aside{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    padding: 30px;
+    padding-left: 10px;
+    border: 3px solid white;
+    border-image: linear-gradient(90deg,rgb(77, 255, 0),rgb(0, 255, 255));
+    border-image-slice: 1;
+    border-left-width: 0;
+    font-size: 14px;
+}
+aside p{
+    margin: 10px 0;
+}
+
+.bola{
+    transition: 0s;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #00ffff00;
+    padding: 0px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+}
+
+
+
+/*
+
+    Aula 04
+
+*/
+
+.invisible{
+    display: none;
+}
+.new{
+    transition: 1s;
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(90deg,rgba(77, 255, 0, 1),rgba(0, 255, 255, 1));
+    border-image-slice: 1;
+    background-color: unset;
+}
+.new:hover{
+    border-image: linear-gradient(270deg,rgba(77, 255, 0, 1),rgba(0, 255, 255, 1));
+    background: linear-gradient(270deg,rgba(77, 255, 0, 0.1),rgba(0, 255, 255, 0.1));
+    border-image-slice: 1;
+}
+
+.btn{
+    cursor: pointer;
+    transition: 0.5s;
+    background: linear-gradient(90deg,rgba(77, 255, 0, 0.5),rgba(0, 255, 255, 0.5));
+    padding: 10px 15px;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: black !important;
+}
+
+.btn:hover{
+    background: linear-gradient(90deg,rgba(77, 255, 0, 1),rgba(0, 255, 255, 1));
+}
+
+input#keyup-active,
+input.use-this
+{
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    padding-left: 15px;
+    margin: 10px auto;
+    line-height: 40px;
+}
+
+.texto-keyup{
+    max-width: 400px;
+    text-align: center;
+    margin: 10px auto;
+    word-wrap: break-word;
+}
+
+.del{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: red;
+    text-decoration: none;
+}
+
+
+/*
+    Aula 05
+*/
+.bg-gradient{
+    padding: 50px 2%;
+    background: unset;
+    color: white;
+    border: transparent solid 2px;
+    border-image: linear-gradient(90deg, green, aqua);
+    border-image-slice: 1;
+}
+.bg-gradient h2{
+    color: white;
+}
+.bg-gradient:hover{
+    border: transparent solid 2px;
+    border-image: linear-gradient(-90deg, green, aqua);
+    border-image-slice: 1;
+    background: linear-gradient(270deg,rgba(77, 255, 0,0.05),rgba(0, 255, 255,0.05));
+}
+
+form.contato{
+    text-align: center;
+}
+form.contato input{
+    transition: 1s;
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 400px;
+    font-weight: 500;
+
+    padding-left: 10px;
+    line-height: 40px;
+    background-color: unset;
+    border: transparent solid 2px;
+    border-image: linear-gradient(90deg, aqua, green);
+    border-image-slice: 1;
+    outline: none;
+}
+form.contato input.w100{
+    max-width: 400px;
+    padding-left: 10px;
+    line-height: 40px;
+    color: white;
+    background-color: unset;
+    border: transparent solid 2px;
+    border-image: linear-gradient(90deg, aqua, green);
+    border-image-slice: 1;
+    outline: none;
+}
+form.contato input:focus{
+    border: transparent solid 2px;
+    border-image: linear-gradient(-90deg, purple, blue);
+    border-image-slice: 1;
+}
+
+.w100{
+    width: 100%;
+}
+
+form.contato input[type=submit]{
+    margin-top: 30px;
+    max-width: 150px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, aqua, green);
+    border: 0;
+}
+
+form.contato input[type="submit"]:hover,
+form.contato input[type="submit"]:focus
+{
+    background: linear-gradient(-90deg, purple, blue);
+    outline: aqua 1px solid;
+    color: white;
+}
+
+.bl-center{
+    width: 90%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+.bg-unset{
+    background: unset;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+
+div h2{
+    margin-bottom: 20px;
+}
+
+.cadastro h2{
+    background: linear-gradient(90deg, purple, aqua);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*-webkit-box-decoration-break: clone;*/
+}
+
+
+
+/*
+    Aula 06
+*/
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 2%;
+    text-align: center;
+
+    background-color: #ccc;
+}
+header nav{
+    display: inline-block;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    transition: 0.3s;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid rgb(183, 183, 183);
+    border-radius: 20px;
+}
+header nav ul li:hover{
+    background-color: rgb(183, 183, 183);
+    border-color: rgb(175, 175, 175);
+}
+
+.el{
+    display: none;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    height: 200px;
+    z-index: 100;
+}
+
+
+
+
+/*
+
+    Aula 08
+
+*/
+
+.transition{
+    transition: 1s;
+}
+.classe-adicionada{
+    background-color: green;
+}
+
+.d1,
+.d2,
+.d3
+{
+    padding: 0;
+}
+
+
+
+/*
+
+    Aula 11
+
+*/
+
+.central{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.uppercase{
+    text-transform: uppercase !important;
+}
+
+.f8{
+    font-size: 8px !important;
+}
+.f9{
+    font-size: 9px !important;
+}
+.f10{
+    font-size: 10px !important;
+}
+.f11{
+    font-size: 11px !important;
+}
+.f12{
+    font-size: 12px !important;
+}
+.f13{
+    font-size: 13px !important;
+}
+.f14{
+    font-size: 14px !important;
+}
+.f15{
+    font-size: 15px !important;
+}
+.f16{
+    font-size: 16px !important;
+}
+.f18{
+    font-size: 18px !important;
+}
+.f22{
+    font-size: 22px !important;
+}
+.f24{
+    font-size: 24px !important;
+}
+.f26{
+    font-size: 26px !important;
+}
+
+.cwhite{
+    color: white !important;
+}
+.cblack{
+    color: black !important;
+}
+.cred{
+    color: red !important;
+}
+.cyellow{
+    color: yellow !important;
+}
+.cgreen{
+    color: green !important;
+}
+.cblue{
+    color: blue !important;
+}
+
+.bgwhite{
+    background-color: white !important;
+}
+.bgblack{
+    background-color: black !important;
+}
+
+
+.bold{
+    font-weight: bold !important;
+}
+
+
+.p0{
+    padding: 0px !important;
+}
+
+.p5{
+    padding: 5px !important;
+}
+
+.p10{
+    padding: 10px !important;
+}
+
+.p15{
+    padding: 15px !important;
+}
+
+.p20{
+    padding: 20px !important;
+}
+
+.pvertical0{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.pvertical5{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.pvertical10{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.pvertical15{
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.pvertical20{
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+}
+span.bg{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.form{
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+form.class11{
+    position: relative;
+    padding: 60px 2%;
+    height: 60%;
+    max-height: 500%;
+    width: 94%;
+    max-width: 600px;
+}
+
+form .closeBtn{
+    cursor: pointer;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+.campo-invalido{
+    border: 2px solid red !important;
+    color: red !important;
+}

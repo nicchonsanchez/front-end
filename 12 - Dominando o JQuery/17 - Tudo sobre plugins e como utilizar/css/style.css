@@ -1,0 +1,134 @@
+/*
+    Padrão
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+section{
+    padding: 40px 2% 90px;
+}
+
+nav{
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+nav a{
+    color: unset;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav p{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/*
+    Section: Artigos
+*/
+
+.artigos h2{
+    
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.artigos article{
+    border: 1px solid rgb(14, 14, 14);
+    padding: 20px;
+    margin: 10px;
+
+    width: 90%;
+    max-width: 900px;
+}
+
+.artigos article p{
+    margin: 10px 0 20px;
+}
+
+
+/*
+    Section: Formulário
+*/
+
+section.formulario form{
+    width: 100%;
+}
+
+section.formulario form h2{
+    font-weight: 100;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section.formulario form .input-box{
+    padding: 15px 2%;
+    width: 100%;
+}
+
+section.formulario .input-box > *{
+    display: block;
+    width: 100%;
+    max-width: 350px;
+}
+
+section.formulario form .input-box label{
+    font-size: 0.8em;
+}
+
+section.formulario form .input-box input{
+    padding: 5px 0;
+    padding-left: 5px;
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+section.formulario form .input-box input:focus{
+    border-bottom-width: 2px;
+}
+
+
+
+/*
+    Section: Galeria Slider
+*/
+
+.galerias a{
+    text-decoration: none;
+}
+
+.galerias h2{
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.galerias > div{
+    margin: 10px 0 20px;
+    padding: 40px 2% 90px;
+    border: 1px solid black;
+}
+
+.galerias .img-galeria{
+    width: calc(33% - 5px);
+    max-width: 350px;
+    height: 180px;
+    display: inline-block;
+    background: #ccc center no-repeat;
+    background-size: cover;
+}

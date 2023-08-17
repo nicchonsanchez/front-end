@@ -123,6 +123,7 @@ aside p{
 }
 
 
+
 /*
 
     Aula 04
@@ -148,6 +149,7 @@ aside p{
 }
 
 .btn{
+    cursor: pointer;
     transition: 0.5s;
     background: linear-gradient(90deg,rgba(77, 255, 0, 0.5),rgba(0, 255, 255, 0.5));
     padding: 10px 15px;
@@ -325,4 +327,165 @@ header nav ul li:hover{
     transform: translateX(-50%);
     height: 200px;
     z-index: 100;
+}
+
+
+
+
+/*
+
+    Aula 08
+
+*/
+
+.transition{
+    transition: 1s;
+}
+.classe-adicionada{
+    background-color: green;
+}
+
+.d1,
+.d2,
+.d3
+{
+    padding: 0;
+}
+
+
+
+/*
+
+    Aula 11
+
+*/
+
+.central{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.f8{
+    font-size: 8px;
+}
+.f9{
+    font-size: 9px;
+}
+.f10{
+    font-size: 10px;
+}
+.f11{
+    font-size: 11px;
+}
+.f12{
+    font-size: 12px;
+}
+.f13{
+    font-size: 13px;
+}
+.f14{
+    font-size: 14px;
+}
+.f15{
+    font-size: 15px;
+}
+.f16{
+    font-size: 16px;
+}
+.f18{
+    font-size: 18px;
+}
+.f22{
+    font-size: 22px;
+}
+.f24{
+    font-size: 24px;
+}
+.f26{
+    font-size: 26px;
+}
+
+.cwhite{
+    color: white;
+}
+.cblack{
+    color: black;
+}
+.cred{
+    color: red;
+}
+.cyellow{
+    color: yellow;
+}
+.cgreen{
+    color: green;
+}
+.cblue{
+    color: blue;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.p5{
+    padding: 5px;
+}
+
+.p10{
+    padding: 10px;
+}
+
+.p15{
+    padding: 15px;
+}
+
+.p20{
+    padding: 20px;
+}
+
+.pvertical5{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pvertical10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pvertical15{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pvertical20{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+}
+span.bg{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
 }

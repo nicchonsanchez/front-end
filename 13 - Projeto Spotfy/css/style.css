@@ -1,0 +1,340 @@
+/* Padrões */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    background-color: black;
+    height: 100%;
+}
+body{
+    color: white;
+}
+a{
+    color: unset;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.i-tamanho-1{
+    font-size: 28px !important;
+}
+
+/* Scroll-bar */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;	
+}
+section::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0);
+}
+section:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+section:hover::-webkit-scrollbar-thumb :hover {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+::-webkit-scrollbar-thumb {
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+
+
+
+
+/* Variáveis */
+:root{
+    --gap-template: 8px;
+    --black-theme: #121212;
+    --black-second: #232323;
+    --black-third: #282828;
+    --black-card: #161616;
+    --black-card-hover: #1f1f1f;
+    --bg-content: #212121;
+    --border-radius-default: 8px;
+    --gray-letter: #a3a3a3;
+}
+
+
+
+
+
+/* Player Aside */
+#player{
+    background-color: rgb(80, 0, 0);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+
+
+
+
+/* Principal */
+main{
+    padding: var(--gap-template);
+    padding-bottom: 0;
+    height: calc(100vh - 190px);
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: var(--gap-template);
+}
+
+
+
+
+
+/* Menu */
+#menu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    gap: var(--gap-template);
+    height: 100%;
+}
+#menu > *{
+    background-color: var(--black-theme);
+    border-radius: var(--border-radius-default);
+}
+
+#menu .top-buttons{
+    padding: 8px 12px;
+    color: var(--gray-letter);
+    font-weight: bold;
+    font-size: 14px;
+}
+#menu .top-buttons li div{
+    transition: 0.5s;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+#menu .top-buttons li div:hover{
+    color: white;
+}
+
+
+#menu .library{
+    padding: 6px 0;
+}
+#menu .library header{
+    padding: 8px 16px;
+    font-weight: bold;
+    color: var(--gray-letter);
+    display: grid;
+    grid-template-columns: 1fr 40px 40px;
+}
+#menu .library header .button{
+    transition: 0.5s;
+    padding: 4px 8px;
+}
+#menu .library header .button:hover{
+    color: white;
+}
+#menu .library header .button div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+#menu .library nav{
+    padding: 8px 16px;
+}
+#menu .library nav .button{
+    background-color: var(--black-second);
+    padding: 6px 10px;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+#menu .library section{
+    overflow-y: scroll;
+    max-height: 290px;
+}
+
+#menu .library section header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu .library section header select{
+    background-color: inherit;
+    color: white;
+    padding: 5px;
+    text-align: right !important;
+    border: 0;
+    outline: 0;
+}
+#menu .library section header select option{
+    background-color: var(--black-third);
+}
+
+#menu .library .list-results{
+    padding: 8px 12px;
+}
+#menu .library .list-results ul li .button{
+    transition: 0.5s;
+    padding: 8px;
+    border-radius: var(--border-radius-default);
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-template);
+}
+#menu .library .list-results ul li .button:hover{
+    background-color: var(--black-second);
+}
+
+#menu .library .list-results ul .capa-album{
+    height: 55px;
+    width: 55px;
+    background-color: bisque;
+    border-radius: 4px;
+}
+#menu .library .list-results ul .text{
+    padding: 3px;
+    font-weight: 600;
+}
+#menu .library .list-results ul .text h3{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+#menu .library .list-results ul .text .description{
+    color: var(--gray-letter);
+    font-size: 14px;
+}
+
+
+
+
+
+/* Seção */
+main > section.page{
+    position: relative;
+    background-color: var(--black-theme);
+    border-radius: var(--border-radius-default);
+    padding: 0px 24px 0;
+    overflow-y: scroll;
+}
+section.page header{
+    display: flex;
+    flex-direction: row;
+    padding: 16px 8px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    background-color: inherit;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+section.page header .arrows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+section.page header .arrows i{
+    background-color: #070707;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+section.page header .options{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+section.page header .options .button{
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #070707;
+    border-radius: 16px;
+}
+section.page header .options .button.white{
+    background-color: white;
+    color: #070707;
+}
+section.page header .options .foto-usuario{
+    background: #070707 url('../images/nicchon-boina.jpg') no-repeat center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border: 4px #070707 solid;
+}
+
+
+section.page .content .group{
+    margin-bottom: 20px;
+}
+section.page .content .title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+section.page .content .title a{
+    color: var(--gray-letter);
+    font-size: 12px;
+    font-weight: bold;
+}
+section.page .content .title a:hover{
+    text-decoration: underline 2px;
+}
+
+section.page .content li{
+    display: inline-block;
+    margin: 10px;
+    margin-left: 0;
+}
+
+section.page .content li .estrutura{
+    transition: 0.5s;
+    background-color: var(--black-card);
+    padding: 16px;
+    border-radius: var(--border-radius-default);
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    gap: 15px;
+}
+section.page .content li .estrutura:hover{
+    background-color: var(--black-card-hover);
+}
+section.page .content li .estrutura .capa{
+    background-color: aliceblue;
+    border-radius: var(--border-radius-default);
+}
+section.page .content li .estrutura .text h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+section.page .content li .estrutura .text p{
+    font-size: 14px;
+    color: var(--gray-letter);
+}

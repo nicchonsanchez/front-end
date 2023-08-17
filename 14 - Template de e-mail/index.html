@@ -1,0 +1,131 @@
+<!--
+Os e-mails em HTML têm algumas limitações.
+
+São desenvolvidos em formato de tabela, usando apenas imagens, tags de tabela e links
+
+No caso de precisar mudar o background de uma parte, invés de usar o style="background" use o atributo bgcolor="#000" (por exemplo).
+
+Sempre que for usar o padding coloque os 4 valores
+Dentro de uma TD não de pode colocar outra TD ou TR, somente outra tabela
+
+Modelo padrão abaixo:
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Meu e-mail marketing!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body style="margin: 0; padding: 0;">
+        <table width="600" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="padding: 20px 0px 20px 0px;" bgcolor="#2d2f3a" align="center">
+                    <img alt="Danki Code" src="https://projetos.nicchon.com/projetos/email-marketing/logo.png" style="display: block; width: 300px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 20px 20px 20px 20px;">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="border-bottom: 2px solid #ccc; padding: 20px 0 20px 0;">
+                                <span style="color:#888; font-size: 22px;">
+                                    Olá, Nicchon!
+                                </span>
+                                <p style="color: #888; font-size: 16px;">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue at arcu id eleifend. Sed commodo ligula at nulla hendrerit, nec tincidunt mauris tristique. Cras elementum, lorem non ultricies molestie, nisl neque auctor sem, porttitor iaculis eros odio sed justo.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 20px 20px 20px 20px;">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td valign="top" width="250" style="padding: 0 0 30px 0;">
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="center"><img alt="icone" src="https://projetos.nicchon.com/projetos/email-marketing/icon.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 10px 0 10px 0; color: #668; font-size: 15px; line-height: 22px;">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue at arcu id eleifend. Sed commodo ligula at nulla hendrerit, nec tincidunt mauris tristique.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Bloco item -->
+
+                            <td width="60"></td>
+                            <!-- Espaço em branco -->
+
+                            <td valign="top" width="250" style="padding: 0 0 30px 0;">
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="center"><img alt="icone" src="https://projetos.nicchon.com/projetos/email-marketing/icon.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 10px 0 10px 0; color: #668; font-size: 15px; line-height: 22px;">
+                                            Aliquam a arcu tincidunt, aliquam mauris non, ornare ligula. Fusce vel blandit magna, quis pretium sem. Proin viverra dapibus scelerisque.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Bloco item -->
+                        </tr>
+
+                        <tr>
+                            <td valign="top" width="250" style="padding: 0 0 30px 0;">
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="center"><img alt="icone" src="https://projetos.nicchon.com/projetos/email-marketing/icon.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 10px 0 10px 0; color: #668; font-size: 15px; line-height: 22px;">
+                                            Sed bibendum aliquet lacus vitae commodo. Sed lobortis sodales mauris at varius. Proin nec fringilla turpis.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Bloco item -->
+
+                            <td width="60"></td>
+                            <!-- Espaço em branco -->
+
+                            <td valign="top" width="250" style="padding: 0 0 30px 0;">
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="center"><img alt="icone" src="https://projetos.nicchon.com/projetos/email-marketing/icon.png"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 10px 0 10px 0; color: #668; font-size: 15px; line-height: 22px;">
+                                            Nulla tempus, purus eu fringilla dictum, magna ex rhoncus mi, fringilla sodales purus dolor quis magna.
+                                            Nulla sed nunc lobortis, rhoncus magna ac, pharetra lacus.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Bloco item -->
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 20px 20px 20px 20px;" bgcolor="#dfdedf">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="left" style="color: #668;">Todos os direitos reservados.</td>
+                            <td align="right" style="color: #668;"><a href="http://dev.nicchon.com" style="color:unset" target="_blank">dev.nicchon.com</a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -15,7 +15,7 @@
 */
 
 
-// Append serve para adicionar um conteúdo NO FINAL do lugar indicado
+// Append serve para adicionar um conteúdo ou mover um elemento NO FINAL do lugar indicado
 
 // O exemplo abaixo irá adicionar um parágrafo 'teste' em todas as classes .box
 
