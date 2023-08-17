@@ -1,2 +1,2 @@
-# Front-end
+# Aulas de Front-end
  Projetos práticos e rascunhos das aulas de front-end
