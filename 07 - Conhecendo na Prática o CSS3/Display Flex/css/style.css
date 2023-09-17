@@ -55,8 +55,7 @@ aside{
 	height: 100%;
 	/*order: 2;*/
 	padding: 50px 20px;
-	display: flex;
-	flex-direction: column;
+	text-align: center;
 }
 aside h2{
 	margin-bottom: 10px;
@@ -64,8 +63,9 @@ aside h2{
 	text-transform: uppercase;
 }
 aside ul{
-	list-style-position: inside;
-	padding-left: 10px;
+	/* list-style-position: inside; */
+	text-align: left;
+	display: inline-block;
 }
 aside li{
 	margin-bottom: 5px;
@@ -81,9 +81,12 @@ aside li a:hover{
 article.texto{
 	width: 100%;
 	/*order: 1;*/
-	padding: 80px 30px;
+	padding: 80px 40px;
 	background: #386edf;
 	height: 100%;
+}
+.text h2{
+	margin-bottom: 10px;
 }
 
 section.cards-box{
