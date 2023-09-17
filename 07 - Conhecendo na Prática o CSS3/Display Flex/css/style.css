@@ -7,19 +7,49 @@
 main{
 	display: flex;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: row-reverse; /* row || row-reverse || column || column-reverse */
+	flex-wrap: nowrap;
+	max-width: 96%;
+	width: 1200px;
+	margin: 0 auto;
 }
 
 aside{
-	width: 300px;
+	width: 40vw;
+	max-width: 500px;
+	height: 100%;
 	/*order: 2;*/
 	background: #ccc;
 	padding: 90px 20px;
 }
 
-article{
-	width: 800px;
+article.texto{
 	/*order: 1;*/
 	padding:30px;
 	background: gray;
+	height: 100%;
+}
+
+section.cards-box{
+	margin: 20px auto;
+	width: 100%;
+	max-width:800px;
+	display: flex;
+	width: 100%;
+}
+article.card{
+	padding: 10px
+}
+.card h2{
+	text-align: center;
+}
+
+.order1{
+	order: 1;
+}
+.order2{
+	order: 2;
+}
+.order3{
+	order: 3;
 }
