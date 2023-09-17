@@ -2,6 +2,42 @@
 	 margin:0;
 	 padding:0;
 	 box-sizing: border-box;
+	 font-family: Helvetica, Arial, sans-serif;
+}
+
+.container{
+	max-width: 96%;
+	width: 1000px;
+	margin: 0 auto;
+}
+.color{
+	background-color: #ffe31cde;
+}
+
+header{
+	padding: 20px 0;
+}
+header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header .logo{
+	padding: 10px 30px;
+	background-color: azure;
+	border-radius: 5px;
+}
+header nav li{
+	display: inline-block;
+	padding: 3px 10px;
+}
+header nav a{
+	text-decoration: none;
+	color: black;
+	font-weight: 400;
+}
+header nav li:hover a{
+	text-decoration: underline;
 }
 
 main{
@@ -9,9 +45,8 @@ main{
 	align-items: center;
 	flex-direction: row-reverse; /* row || row-reverse || column || column-reverse */
 	flex-wrap: nowrap;
-	max-width: 96%;
-	width: 1200px;
 	margin: 0 auto;
+	background: #ccc;
 }
 
 aside{
@@ -19,29 +54,58 @@ aside{
 	max-width: 500px;
 	height: 100%;
 	/*order: 2;*/
-	background: #ccc;
-	padding: 90px 20px;
+	padding: 50px 20px;
+}
+aside div{
+	display: inline-block;
+	margin: 0 auto;
+}
+aside h2{
+	margin-bottom: 10px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+aside ul{
+	list-style-position: inside;
+	padding-left: 10px;
+}
+aside li{
+	margin-bottom: 5px;
+}
+aside li a{
+	text-decoration: none;
+	color: #0b0b0b;
+}
+aside li a:hover{
+	text-decoration: underline;
 }
 
 article.texto{
+	width: 100%;
 	/*order: 1;*/
-	padding:30px;
-	background: gray;
+	padding: 80px 30px;
+	background: #386edf;
 	height: 100%;
 }
 
 section.cards-box{
-	margin: 20px auto;
+	padding: 20px 2%;
+	margin: 0 auto;
 	width: 100%;
-	max-width:800px;
+	max-width:900px;
 	display: flex;
+	flex-direction: row;
 	width: 100%;
 }
 article.card{
-	padding: 10px
+	padding: 20px
 }
 .card h2{
 	text-align: center;
+	margin-bottom: 10px;
+}
+.card p{
+	text-align: justify;
 }
 
 .order1{
