@@ -1,0 +1,6 @@
+https://github.com/michalsnik/aos
+
+Baixar os arquivos do link acima e chamá-los no código:
+
+<link href="aos.css" rel="stylesheet">
+<script src="aos.js">

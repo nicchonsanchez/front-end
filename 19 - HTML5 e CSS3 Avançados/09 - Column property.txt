@@ -1,0 +1,23 @@
+<html>
+
+<!-- COLUMN serve para separar o texto em colunas, como num jornal, por exemplo. -->
+
+<head>
+<style>
+.newspaper{
+	column-count: 3;
+	column-width: 50px;
+	column-gap: 10px;
+	width: 100%;
+	text-align: justify;
+}
+</style>
+</head>
+
+
+<body>
+<div class="newspaper">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget tellus purus. Integer mattis arcu nec diam mattis, a cursus arcu posuere. Curabitur congue nisl non lorem consectetur vehicula. Duis venenatis eros pharetra tristique luctus. Praesent arcu mauris, commodo eu fringilla vel, suscipit quis sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vel tortor velit. Nulla a justo luctus, vehicula ligula quis, elementum tellus. Sed et convallis justo, et posuere eros. Etiam augue libero, pellentesque quis turpis in, commodo facilisis velit. Maecenas faucibus neque sed urna dictum, vehicula fermentum tellus dapibus. Morbi ligula metus, venenatis in consectetur id, condimentum mattis magna. Cras ac urna a metus rhoncus cursus. Phasellus magna massa, posuere at odio eget, tempor consectetur libero. Aenean eu aliquam diam, non dignissim augue.
+</div>
+</body>
+</html>

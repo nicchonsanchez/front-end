@@ -1,0 +1,2 @@
+Conteúdo simples que já foi ensinado.
+O professor fez um menu na lateral com submenu, o submenu aparecia com o hover no menu principal

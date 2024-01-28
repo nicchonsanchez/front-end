@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<body>
+
+    <!-- Tudo que estiver dentro de uma div com atributo ng-app e estiver entro e {{}} chaves dentro de chaves será lido como Angular -->
+<div ng-app="">
+    <p>Name : <input type="text" ng-model="name"></p>
+    <h1>Hello {{name}}</h1>
+
+    <!-- Isto faz com que possamos trabalhar com expressões também -->
+    <h1>A soma de 5 + 5 é: {{ 5 + 5 }} </h1>
+
+
+    <!-- ng-init dá um valor inicial à variável -->
+    <div ng-init="corEscrita='lightblue';corEscrita2='lightgreen'">
+        <input type="text" name="cor" style="background-color: {{corEscrita}}" ng-model="corEscrita">
+        <input type="text" name="cor2" style="background-color: {{corEscrita2}}" ng-model="corEscrita2">
+    </div>
+
+
+    <!-- bg-bind serve para escrever o conteúdo da tag -->
+    <div ng-init="firstName='John'">
+        <p>The name is <span ng-bind="firstName"></span></p>
+    </div>
+
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</body>
+</html>

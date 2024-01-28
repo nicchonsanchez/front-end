@@ -1,0 +1,1 @@
+Só explicou o motivo de usar o css html,body{height:100%}, que é para usar porcentagem na altura em uma página

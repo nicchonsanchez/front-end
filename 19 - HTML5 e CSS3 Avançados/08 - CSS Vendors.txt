@@ -1,0 +1,14 @@
+Prefixos para algumas estilizações em outros navegadores:
+(muitas estilizações já não precisam mais disso)
+
+Android, Chrome e Safari:
+-webkit-
+
+Firefox:
+-moz-
+
+Internet Explore:
+-ms-
+
+Opera:
+-o-

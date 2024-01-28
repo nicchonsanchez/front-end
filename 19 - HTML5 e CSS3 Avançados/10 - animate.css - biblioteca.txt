@@ -1,0 +1,6 @@
+https://github.com/animate-css/animate.css
+https://animate.style/
+
+animate.css é uma biblioteca que possui algumas animações que podem ser feitas utilizando classes no HTML.
+No site do GitHUB acima podemos ver a documentação do animate.css
+No outro site podemos encontrar a página oficial

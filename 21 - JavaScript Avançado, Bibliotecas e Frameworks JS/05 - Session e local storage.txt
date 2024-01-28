@@ -1,0 +1,24 @@
+<html>
+
+	<!-- Ensina a usar o coockie no JS -->
+
+<head>
+<script>
+if (typeOf(Storage) !== "undefined"){
+	//Computador compatível com o Storage (Cookies)
+	initialize();
+} else {//Computador NÃO é compatível com o Storage (Cookies)}
+
+function initialize(){
+	if(sessionStorage.getItem("nome") !== null){
+		alert("Olá, "+sessionStorage.nome+"! Seja bem-vindo de volta! :)");
+	} else {
+		alert("Olá! Essa é a sua primeira visita ao site!")
+	var nomeUsuario = prompt("Qual é o seu nome?");
+	sessionStorage.nome = nomeUsuario;
+	}
+}
+
+</script>
+</head>
+</html>

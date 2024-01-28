@@ -1,0 +1,15 @@
+<!--
+	A tag <figure> é do HTML5, serve para adicionar imagens, lista de código, ilustração, diagramas e etc, fica mais semântico. Nela podem ser adicionadas imagens e o <figcaption> para descrever a imagem
+
+W3Schools:
+The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+
+While the content of the <figure> element is related to the main flow, its position is independent of the main flow, and if removed it should not affect the flow of the document.
+
+Tip: The <figcaption> element is used to add a caption for the <figure> element.
+-->
+
+<figure>
+  <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+</figure>

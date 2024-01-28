@@ -1,0 +1,24 @@
+Metodologia BEM (Block Element Modifier) é uma metodologia que visa uma organização na nomeclatura das classes utilizando 2 underlines indicando antes o nome da tag pai e depois a tag atual, como abaixo
+
+
+<div class="box">
+	<div class="box__elemento1"></div>
+	<div class="box__elemento2"></div>
+	<div class="box__elemento3"></div>
+</div>
+
+Para no CSS aplicara assim:
+
+.box{
+	color: yellow;
+	width: 100%
+}
+.box__elemento1{
+	background: red;
+}
+.box__elemento2{
+	background: blue;
+}
+.box__elemento3{
+	background: green;
+}
