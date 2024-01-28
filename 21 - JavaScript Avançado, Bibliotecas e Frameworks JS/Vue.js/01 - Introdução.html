@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<body>
+
+    <div id="app">{{ message }}</div>
+    <div id="app2"></div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        const { createApp, ref, onMounted } = Vue;
+
+        const app1 = createApp({
+            setup() {
+                const message = ref('Hello Vue!')
+                return {
+                    message
+                }
+            }
+        }).mount('#app');
+
+        const app2 = createApp({
+            setup() {
+                const nome = ref('<h2>Hey, Nick!</h2>');
+
+                onMounted(() => {
+                    document.getElementById('app2').innerHTML = nome.value;
+                });
+
+                return {
+                    nome
+                };
+            }
+        }).mount('#app2');
+    </script>
+</body>
+
+</html>

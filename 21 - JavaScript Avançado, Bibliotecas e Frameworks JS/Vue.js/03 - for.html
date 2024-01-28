@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+<body>
+
+    <div id="app">
+        <ol>
+            <li v-for="todo in todos" :key="todo.text">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+
+        const app = Vue.createApp({
+            data() {
+                return {
+                    todos: [
+                        { text: 'Learn JavaScript' },
+                        { text: 'Learn Vue' },
+                        { text: 'Build something awesome!' }
+                    ]
+                };
+            }
+        });
+
+        const vm = app.mount('#app');
+
+    </script>
+</body>
+</html>
