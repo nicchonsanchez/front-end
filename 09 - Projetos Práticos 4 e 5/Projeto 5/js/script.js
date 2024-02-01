@@ -28,14 +28,14 @@ $(function(){
         var curPage = url[url.length-1].split('#');
 
         if(curPage[1] != undefined || curPage == 'contato'){
-            $('[href="#contato"]').css('color','#EB2D2D');
-            // $('html, body').animate({'scrollTop':$('[href="#contato"]').offset().top});
-        } else if(curPage[0] == 'index'){
-            $('a[href=home]').css('color','#EB2D2D');
-        } else if (curPage[0] == '') {
-            $('a[href=home]').css('color','#EB2D2D');
+            $('header a[href$="#contato"]').css('color','#EB2D2D');
+            // $('html, body').animate({'scrollTop':$('[href$="#contato"]').offset().top});
+        } else if(curPage == 'index'){
+            $('header a[href$="home"]').css('color','#EB2D2D');
+        } else if (curPage == '') {
+            $('header a[href$="home"]').css('color','#EB2D2D');
         } else {
-            $('a[href='+curPage[0]+']').css('color','#EB2D2D');
+            $('header a[href$='+curPage+']').css('color','#EB2D2D');
         }
     }
 

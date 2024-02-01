@@ -7,7 +7,7 @@
             $dSearchIndex = array_search('index.php', $dSplit);
             unset($dSplit[$dSearchIndex]);
             $diretorio = implode("/", $dSplit);
-            $urlSite = 'http://'.$_SERVER['HTTP_HOST'].$diretorio;
+            $urlSite = 'https://'.$_SERVER['HTTP_HOST'].$diretorio;
 
         ?>
         <!-- Personalização -->
