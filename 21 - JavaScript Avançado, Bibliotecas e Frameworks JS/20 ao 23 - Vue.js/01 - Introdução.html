@@ -14,9 +14,20 @@
 
     <script src="https://unpkg.com/vue@3"></script>
     <script>
-        const { createApp, ref, onMounted } = Vue;
 
-        const app1 = createApp({
+        /*
+        // Este foi o método usado na aula, que é o método do Vue 2
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+        */
+
+        // Este é o método do Vue 3
+        const { createApp, ref, onMounted } = Vue;
+        const app = createApp({
             setup() {
                 const message = ref('Hello Vue!')
                 return {
@@ -24,6 +35,8 @@
                 }
             }
         }).mount('#app');
+
+
 
         const app2 = createApp({
             setup() {

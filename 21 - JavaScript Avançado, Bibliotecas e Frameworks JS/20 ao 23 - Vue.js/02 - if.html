@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<body>
+
+    <div id="app" v-if="visivel"> <!-- Aqui colocamos o v-if para indicar o nome da variável usada para condição, que nesse caso é "visivel" --> 
+        <h1>Podemos começar!</h1>
+    </div>
+
+    <!-- Estamos usando o Vue 2, pois é, aparentemente, a versão ensinada na aula -->
+    <script src="https://unpkg.com/vue@2"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                visivel: true // Se colocar false a div irá desaparecer
+            }
+        })
+    </script>
+</body>
+
+</html>

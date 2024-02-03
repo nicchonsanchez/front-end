@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+
+    <style>
+        /* APP 1 */
+        #app {
+          border: dashed black 1px;
+          display: inline-block;
+          padding-bottom: 10px;
+        }
+    
+        #app > button {
+          display: block;
+          margin: auto;
+        }
+
+        /* APP 2 */
+        #lightDiv {
+          position: relative;
+          width: 150px;
+          height: 150px;
+        }
+    
+        #lightDiv > img {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+    
+        #lightDiv > div {
+          position: absolute;
+          top: 10%;
+          left: 10%;
+          width: 80%;
+          height: 80%;
+          border-radius: 50%;
+          background-color: yellow;
+        }
+
+        /* APP 4 */
+        #app4 {
+            border: dashed black 1px;
+            width: 350px;
+            padding: 0 20px;
+        }
+        #app4 > div {
+            width: 200px;
+            height: 80px;
+        }
+        #app4 span {
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* APP 5 */
+        #app5 {
+            border: dashed black 1px;
+            width: 220px;
+            padding: 20px;
+        }
+
+        #app5 > img {
+            float: right;
+            width: 55%;
+        }
+
+        li:hover {
+            cursor: pointer;
+            background-color: rgb(224, 224, 224);
+        }
+
+        #app5 > ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app5 li {
+            padding-left: 6px;
+            border-radius: 5px;
+            width: 70px;
+        }
+
+        /* APP6 */
+        #app6 {
+            border: black dashed 1px;
+            width: 200px;
+            padding: 0 20px 20px 20px;
+        }
+        #app6 > div {
+            width: 140px;
+            height: 60px;
+            background-color: lightgreen;
+            padding: 20px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* APP7 */
+        #app7 {
+            border: black dashed 1px;
+            width: 200px;
+            padding: 0 20px 20px 20px;
+        }
+        #app7 > div {
+            width: 160px;
+            height: 80px;
+            background-color: lightcoral;
+            padding: 20px;
+        }
+        #app7 span {
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+      </style>
+      
+</head>
+<body>
+
+    <!-- v-on:click -->
+    <div id="app">
+        <p>{{ "Contar clicks: " + varClick }}</p>
+        <button v-on:click="varClick++">Click v-on:</button> <!-- v-on:click serve para eventos de click -->
+        <button @click="varClick++">Click @</button> <!-- o v-on: pode ser substituido por @: -->
+    </div>
+
+    <hr>
+
+    <!-- v-on:click e v-show -->
+    <h1>Example: Light Switch</h1>
+    <p>A diretiva v-on é usada na tag do botão para ouvir o evento 'click'. Quando o evento 'click' ocorre, a propriedade de dados 'lightOn' é alternada entre 'true' e 'false', tornando o div amarelo atrás da lâmpada visível/oculto.</p>
+    <div id="app2">
+        <div id="lightDiv">
+            <div v-show="lightOn"></div>
+            <img src="https://www.w3schools.com/vue/img_lightBulb.svg">
+        </div>
+        <button v-on:click=" lightOn =! lightOn ">Switch light</button>
+    </div>
+
+    <hr>
+
+    <!-- v-on:input -->
+    <div id="app3">
+        <input v-on:input="inpCount++">
+        <p>{{ 'Input events occured: ' + inpCount }}</p>
+    </div>
+
+    <hr>
+
+    <!-- v-on:mousemove -->
+    <div id="app4">
+        <p>Mova o mouse sobre o box abaixo</p>
+        <div v-on:mousemove="colorVal=Math.floor(Math.random()*360)"
+             v-bind:style="{backgroundColor:'hsl('+colorVal+',80%,80%)'}">
+        </div>
+        <p><span>backgroundColor: hsl(<strong>{{ colorVal }}</strong>, 80%, 80%)</span></p>
+        <p>Para entender como colocar a cor com 'hsl()' veja <a href="/css/css_colors_hsl.asp" target="_blank">a página do W3Schools sobre isso</a>.</p>
+    </div>
+
+    <hr>
+
+    <!-- v-on dentro de um loop do v-for -->
+    <div id="app5">
+        <img v-bind:src="imgUrl">
+        <ol>
+            <li v-for="food in manyFoods" v-on:click="imgUrl=food.url">
+            {{ food.name }}
+            </li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <!-- Usar o method -->
+    <div id="app6">
+        <p>Click on the box below:</p>
+        <div v-on:click="changeText">
+            {{ text }}
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Usar o method de novo -->
+    <div id="app7">
+        <p>Move the mouse pointer over the box below:</p>
+        <div v-on:mousemove="mousePos">
+            <span>xPos: {{ xPos }}</span><br><span>yPos: {{ yPos }}</span>
+        </div>
+    </div>
+
+
+      
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script>
+        // Exemplo de contar clicks
+        const app = Vue.createApp({
+            data() {
+                return {
+                    varClick: 0
+                }
+            }
+        })
+        app.mount('#app')
+
+        // Exemplo da lâmpada
+        const app2 = Vue.createApp({
+            data() {
+                return {
+                    lightOn: false
+                }
+            }
+        })
+        app2.mount('#app2')
+
+        // Exemplo do input
+        const app3 = Vue.createApp({
+            data() {
+                return {
+                    inpCount: 0
+                }
+            }
+        })
+        app3.mount('#app3')
+
+        // Exemplo mousemove
+        const app4 = Vue.createApp({
+            data() {
+            return {
+                colorVal: 50
+            }
+            }
+        })
+        app4.mount('#app4')
+        
+        // Exemplo da comida
+        const app5 = Vue.createApp({
+            data() {
+            return {
+                imgUrl: 'https://www.w3schools.com/vue/img_pizza.svg',
+                manyFoods: [
+                {name: 'Burrito', url: 'https://www.w3schools.com/vue/img_burrito.svg'},
+                {name: 'Salad', url: 'https://www.w3schools.com/vue/img_salad.svg'},
+                {name: 'Cake', url: 'https://www.w3schools.com/vue/img_cake.svg'},
+                {name: 'Soup', url: 'https://www.w3schools.com/vue/img_soup.svg'},
+                {name: 'Fish', url: 'https://www.w3schools.com/vue/img_fish.svg'},
+                {name: 'Pizza', url: 'https://www.w3schools.com/vue/img_pizza.svg'},
+                {name: 'Rice', url: 'https://www.w3schools.com/vue/img_rice.svg'}
+            ]
+            }
+            }
+        })
+        app5.mount('#app5')
+
+        // Methods
+        const app6 = Vue.createApp({
+            data() {
+                return {
+                    text: 'Clique aqui!'
+                }
+                },
+                // No methods você cria funções
+                methods: {
+                changeText() {
+                    this.text = 'Charaaammm!'
+                }
+            }
+        })
+        app6.mount('#app6')
+
+        // Method de novo, porém melhor kk
+        const app7 = Vue.createApp({
+            data() {
+                return {
+                    xPos: 0,
+                    yPos: 0
+                }
+            },
+            methods: {
+                mousePos(event) {
+                    this.xPos = event.offsetX
+                    this.yPos = event.offsetY
+                }
+            }
+        })
+        app7.mount('#app7')
+      </script>
+</body>
+</html>

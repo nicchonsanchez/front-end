@@ -1,38 +1,120 @@
 <html>
 <head>
-
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="https://nicchon.com/images/favicon.png" type="image/x-icon">
+</head>
+<body>
 	<!-- Usando um framework de notificações - push.js -->
+	<!--
+		Mais informações sobre o Push no https://github.com/Nickersoft/push.js
+	-->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
-<script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+	<script>
 
+	/*
+		Notificações usando o Push.JS
+	*/
+	/*
 	if(Push.Permission.get() != 'granted'){
 		Push.Permission.request();
 	}
 
 	if(Push.Permission.get() == 'granted'){
-		Push.create('Olá da Danki Code!', {
-			body: 'Esta é uma notificação',
-			icon: 'icon.png',
-			timeout: 3000,
-			vibrate: [100,100,100], // Para vibração de celular e outros dispositivos móveis
-			onClick: function(){
-				window.location.href="https://nicchon.com";
-			}
-		});
+		setTimeout(() => {
+			Push.create('Olá! Venha ver o meu site', {
+				body: 'Esta é uma notificação',
+				icon: 'https://nicchon.com/images/nicchon-logo.png',
+				timeout: 3000,
+				vibrate: [100,100,100], // Para vibração de celular e outros dispositivos móveis
+				onClick: function(){
+					window.location.href="https://nicchon.com";
+				}
+			});
+		}, 2000);
 	}
+	*/
 
-	Push.create('Olá da Danki Code!', {
-			body: 'Esta é uma notificação',
-			icon: 'icon.png',
-			timeout: 3000,
-			vibrate: [100,100,100], // Para vibração de celular e outros dispositivos móveis
-			onClick: function(){
-				window.location.href="https://nicchon.com";
-			}
-		});
+	/*
+		Notification(): principais parâmetros
 
+			A função `Notification` em JavaScript suporta várias opções para personalizar o comportamento e a aparência das notificações. Aqui estão algumas das opções disponíveis:
 
-</script>
-</head>
+			1. `dir`: Define a direção do texto da notificação. Pode ser "auto", "ltr" (da esquerda para a direita) ou "rtl" (da direita para a esquerda).
+			```javascript
+			dir: 'auto'
+			```
+
+			2. `lang`: Define o idioma do conteúdo e das ações da notificação.
+			```javascript
+			lang: 'en-US'
+			```
+
+			3. `body`: Define o corpo da notificação, que é o texto principal exibido na notificação.
+			```javascript
+			body: 'Corpo da notificação'
+			```
+
+			4. `tag`: Uma string que identifica uma notificação. Se você criar uma nova notificação com a mesma tag, ela substituirá a notificação existente com a mesma tag.
+			```javascript
+			tag: 'minha-notificacao'
+			```
+
+			5. `icon`: Uma URL que aponta para um ícone a ser exibido junto com a notificação.
+			```javascript
+			icon: 'caminho/do/ícone.png'
+			```
+
+			6. `image`: Uma URL que aponta para uma imagem a ser exibida junto com a notificação.
+			```javascript
+			image: 'caminho/da/imagem.png'
+			```
+
+			7. `badge`: Uma URL que aponta para um ícone a ser usado como distintivo para a notificação.
+			```javascript
+			badge: 'caminho/do/distintivo.png'
+			```
+
+			8. `vibrate`: Uma matriz de números que descreve um padrão de vibração para dispositivos que suportam vibração.
+			```javascript
+			vibrate: [200, 100, 200]
+			```
+
+			9. `renotify`: Um booleano que indica se a notificação deve ser reproduzida ou não um som novamente se já estiver visível.
+			```javascript
+			renotify: true
+			```
+
+			10. `silent`: Um booleano que indica se a notificação deve ser silenciosa (sem som).
+			```javascript
+			silent: true
+			```
+
+			Estas são apenas algumas opções comuns. Você pode consultar a [documentação oficial da MDN](https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification) para obter informações mais detalhadas sobre as opções disponíveis e exemplos de uso.
+	*/
+
+	Notification.requestPermission().then(perm => {
+		if(perm == "granted"){
+			const notification = new Notification("Olá! Aqui é o Nick!", {
+			body: "Venha ver como ficou meu novo site! :D",
+			data: {
+				hello: "world"
+			},
+			icon: 'https://nicchon.com/images/nicchon-logo.png',
+			image: 'https://nicchon.com/images/nicchon-boina.jpg',
+			badge: 'https://nicchon.com/images/favicon.png',
+			lang: 'pt-BR',
+			tag: 'minha-notificacao',
+			vibrate: [200, 100, 200]
+		})
+
+		notification.addEventListener('click', function () {
+			// Redireciona para a página desejada ao clicar na notificação
+			window.location.href = 'https://nicchon.com';
+    	});
+		}
+	})
+
+	</script>
+</body>
 </html>
