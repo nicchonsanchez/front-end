@@ -1,4 +1,5 @@
 var app = angular.module("myShoppingList", []);
+
 app.controller("myCtrl", function($scope) {
   $scope.produtos = ["Pão", "Queijo", "Suco"];
   $scope.addItem = function(){
