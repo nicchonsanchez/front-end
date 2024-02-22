@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <?php
-;
+        
             $dSplit = explode('/', $_SERVER['PHP_SELF']);
             $dSearchIndex = array_search('index.php', $dSplit);
             unset($dSplit[$dSearchIndex]);
